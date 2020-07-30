@@ -22,4 +22,13 @@ public class ExampleUnitTest {
     public void isPalindrome() {
         Assert.assertTrue(EasyUtil.isPalindrome(121));
     }
+
+    @Test
+    public void romanToInt() {
+        Assert.assertEquals(EasyUtil.romanToInt("III"), 3);
+        Assert.assertEquals(EasyUtil.romanToInt("IV"), 4);
+        Assert.assertEquals(EasyUtil.romanToInt("IX"), 9);
+        Assert.assertEquals(EasyUtil.romanToInt("LVIII"), 58);
+        Assert.assertEquals(EasyUtil.romanToInt("MCMXCIV"), 1994);
+    }
 }
