@@ -31,4 +31,9 @@ public class ExampleUnitTest {
         Assert.assertEquals(EasyUtil.romanToInt("LVIII"), 58);
         Assert.assertEquals(EasyUtil.romanToInt("MCMXCIV"), 1994);
     }
+
+    @Test
+    public void longestCommonPrefix() {
+        Assert.assertEquals(EasyUtil.longestCommonPrefix(new String[]{"flower","flow","flight"}), "fl");
+    }
 }
