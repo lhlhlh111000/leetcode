@@ -36,4 +36,13 @@ public class ExampleUnitTest {
     public void longestCommonPrefix() {
         Assert.assertEquals(EasyUtil.longestCommonPrefix(new String[]{"flower","flow","flight"}), "fl");
     }
+
+    @Test
+    public void isValid() {
+        Assert.assertTrue(EasyUtil.isValid("()"));
+        Assert.assertTrue(EasyUtil.isValid("()[]{}"));
+        Assert.assertFalse(EasyUtil.isValid("(]"));
+        Assert.assertFalse(EasyUtil.isValid("([)]"));
+        Assert.assertTrue(EasyUtil.isValid("{[]}"));
+    }
 }

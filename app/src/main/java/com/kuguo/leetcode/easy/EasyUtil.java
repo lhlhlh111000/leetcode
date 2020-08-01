@@ -1,5 +1,9 @@
 package com.kuguo.leetcode.easy;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
 /**
  * Title:
  * Description:
@@ -85,5 +89,33 @@ public class EasyUtil {
             }
         }
         return ans;
+    }
+
+    public static boolean isValid(String s) {
+        if(null == s || s.isEmpty()) {
+            return true;
+        }
+
+        Map<String, String> dict = new HashMap<>();
+        dict.put("{", "}");
+        dict.put("(", ")");
+        dict.put("[", "]");
+        Stack<String> stack = new Stack<>();
+        for(int i=0; i<s.length(); i++) {
+            String str = s.substring(i, i+1);
+            if("{".equals(str) || "(".equals(str) || "[".equals(str)) {
+                stack.push(str);
+            }else {
+                if(stack.isEmpty()) {
+                    return false;
+                }
+                String pre = stack.pop();
+                if(!str.equals(dict.get(pre))) {
+                    return false;
+                }
+            }
+        }
+
+        return stack.isEmpty();
     }
 }
