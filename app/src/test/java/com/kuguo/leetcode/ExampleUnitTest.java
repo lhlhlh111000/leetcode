@@ -5,7 +5,7 @@ import com.kuguo.leetcode.easy.EasyUtil;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -44,5 +44,10 @@ public class ExampleUnitTest {
         Assert.assertFalse(EasyUtil.isValid("(]"));
         Assert.assertFalse(EasyUtil.isValid("([)]"));
         Assert.assertTrue(EasyUtil.isValid("{[]}"));
+    }
+
+    @Test
+    public void mergeTwoLists() {
+
     }
 }
