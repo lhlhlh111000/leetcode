@@ -151,4 +151,20 @@ public class EasyUtil {
 
         return i+1;
     }
+
+    public static int removeElement(int[] nums, int val) {
+        if(null == nums || 0 == nums.length) {
+            return 0;
+        }
+
+        int j=0;
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i] != val) {
+                nums[j] = nums[i];
+                j++;
+            }
+        }
+
+        return j;
+    }
 }
