@@ -167,4 +167,20 @@ public class EasyUtil {
 
         return j;
     }
+
+    public static int strStr(String haystack, String needle) {
+        if(null == needle || needle.length() <= 0) {
+            return 0;
+        }
+
+        int hLength = haystack.length();
+        int nLength = needle.length();
+        for(int i=0; i<hLength-nLength+1; i++) {
+            if(haystack.substring(i, i+nLength).equals(needle)) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
 }

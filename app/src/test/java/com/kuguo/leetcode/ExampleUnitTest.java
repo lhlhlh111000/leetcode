@@ -56,4 +56,10 @@ public class ExampleUnitTest {
         Assert.assertEquals(EasyUtil.removeDuplicates(new int[]{1,1,2}), 2);
         Assert.assertEquals(EasyUtil.removeDuplicates(new int[]{0,0,1,1,1,2,2,3,3,4}), 5);
     }
+
+    @Test
+    public void strStr() {
+        Assert.assertEquals(EasyUtil.strStr("hello", "ll"), 2);
+        Assert.assertEquals(EasyUtil.strStr("aaaaa", "bba"), -1);
+    }
 }
