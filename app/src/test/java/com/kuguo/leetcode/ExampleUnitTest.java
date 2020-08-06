@@ -62,4 +62,9 @@ public class ExampleUnitTest {
         Assert.assertEquals(EasyUtil.strStr("hello", "ll"), 2);
         Assert.assertEquals(EasyUtil.strStr("aaaaa", "bba"), -1);
     }
+
+    @Test
+    public void searchInsert() {
+        Assert.assertEquals(EasyUtil.searchInsert(new int[]{1,3,5,6}, 5), 2);
+    }
 }

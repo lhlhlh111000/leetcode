@@ -183,4 +183,18 @@ public class EasyUtil {
 
         return -1;
     }
+
+    public static int searchInsert(int[] nums, int target) {
+        if(null == nums || nums.length <= 0) {
+            return 0;
+        }
+
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i] >= target) {
+                return i;
+            }
+        }
+
+        return nums.length;
+    }
 }
