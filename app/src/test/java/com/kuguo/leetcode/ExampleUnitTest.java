@@ -67,4 +67,13 @@ public class ExampleUnitTest {
     public void searchInsert() {
         Assert.assertEquals(EasyUtil.searchInsert(new int[]{1,3,5,6}, 5), 2);
     }
+
+    @Test
+    public void countAndSay() {
+        Assert.assertEquals(EasyUtil.countAndSay(1), "1");
+        Assert.assertEquals(EasyUtil.countAndSay(2), "11");
+        Assert.assertEquals(EasyUtil.countAndSay(3), "21");
+        Assert.assertEquals(EasyUtil.countAndSay(4), "1211");
+        Assert.assertEquals(EasyUtil.countAndSay(5), "111221");
+    }
 }

@@ -197,4 +197,31 @@ public class EasyUtil {
 
         return nums.length;
     }
+
+    public static String countAndSay(int n) {
+        String start = "1";
+        for(int i=1; i<n; i++) {
+            start = a(start);
+        }
+
+        return start;
+    }
+
+    private static String a(String str) {
+        String result = "";
+        int count = 1;
+        String s = String.valueOf(str.charAt(0));
+        for(int i=1; i<str.length(); i++) {
+            if(s.equals(String.valueOf(str.charAt(i)))) {
+                count++;
+            }else {
+                result = result + count + s;
+                count = 1;
+                s = String.valueOf(str.charAt(i));
+            }
+        }
+
+        result = result + count + s;
+        return result;
+    }
 }
