@@ -76,4 +76,9 @@ public class ExampleUnitTest {
         Assert.assertEquals(EasyUtil.countAndSay(4), "1211");
         Assert.assertEquals(EasyUtil.countAndSay(5), "111221");
     }
+
+    @Test
+    public void maxSubArray() {
+        Assert.assertEquals(EasyUtil.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}),  6);
+    }
 }
