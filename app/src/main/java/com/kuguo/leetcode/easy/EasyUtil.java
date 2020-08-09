@@ -240,4 +240,29 @@ public class EasyUtil {
         return ans;
     }
 
+    public static int lengthOfLastWord(String s) {
+        if(null == s || s.length() <= 0) {
+            return 0;
+        }
+
+        String[] words = s.split(" ");
+        if(words.length <= 0) {
+            return 0;
+        }
+
+        return words[words.length - 1].length();
+    }
+
+    public static int[] plusOne(int[] digits) {
+        for(int i=digits.length - 1; i>=0; i--) {
+            digits[i]++;
+            digits[i] = digits[i]%10;
+            if(digits[i] != 0) {
+                return digits;
+            }
+        }
+        digits = new int[digits.length + 1];
+        digits[0] = 1;
+        return digits;
+    }
 }

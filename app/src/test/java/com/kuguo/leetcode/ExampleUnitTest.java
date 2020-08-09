@@ -81,4 +81,16 @@ public class ExampleUnitTest {
     public void maxSubArray() {
         Assert.assertEquals(EasyUtil.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}),  6);
     }
+
+    @Test
+    public void lengthOfLastWord() {
+        Assert.assertEquals(EasyUtil.lengthOfLastWord("Hello World"), 5);
+    }
+
+    @Test
+    public void plusOne() {
+        Assert.assertArrayEquals(EasyUtil.plusOne(new int[]{1,2,3}), new int[]{1,2,4});
+        Assert.assertArrayEquals(EasyUtil.plusOne(new int[]{9,9,9}), new int[]{1,0,0,0});
+        Assert.assertArrayEquals(EasyUtil.plusOne(new int[]{7,3,9}), new int[]{7,4,0});
+    }
 }
