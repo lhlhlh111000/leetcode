@@ -265,4 +265,48 @@ public class EasyUtil {
         digits[0] = 1;
         return digits;
     }
+
+    public static String addBinary(String a, String b) {
+        if(null == a || a.length() <= 0) {
+            return b;
+        }
+        if(null == b || b.length() <= 0) {
+            return a;
+        }
+
+        int diff = a.length() - b.length();
+        if(diff > 0) {
+            for(int i=0; i<Math.abs(diff); i++) {
+                b = "0" + b;
+            }
+        }else {
+            for(int i=0; i<Math.abs(diff); i++) {
+                a = "0" + a;
+            }
+        }
+
+        int length = a.length();
+        int i = length - 1;
+        boolean isAdd = false;
+        String result = "";
+        while (i >= 0) {
+            int aInt = Integer.parseInt(String.valueOf(a.charAt(i)));
+            int bInt = Integer.parseInt(String.valueOf(b.charAt(i)));
+            int sum = aInt + bInt;
+            if(isAdd) {
+                sum += 1;
+                isAdd = false;
+            }
+            if(sum >= 2) {
+                isAdd = true;
+            }
+            result = sum%2 + result;
+            i--;
+        }
+
+        if(isAdd) {
+            result = "1" + result;
+        }
+        return result;
+    }
 }
