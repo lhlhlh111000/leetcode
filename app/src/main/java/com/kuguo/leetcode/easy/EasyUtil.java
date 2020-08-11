@@ -311,19 +311,18 @@ public class EasyUtil {
     }
 
     public static int mySqrt(int x) {
-        int ans = -1;
-        int l = 0;
-        int r = x;
-        while (l <= r) {
-            int mid = l + (r -1)/2;
-            if(mid*mid <= x) {
-                ans = mid;
-                l = mid + 1;
+        if(x == 0) return 0;
+        long left = 1;
+        long right = x/2;
+        while (left < right){
+            //注意这一行代码
+            long mid = (right + left)/2 + 1;
+            if(mid > x/mid) {
+                right = mid - 1;
             }else {
-                r = mid - 1;
+                left = mid;
             }
         }
-
-        return ans;
+        return(int) left;
     }
 }

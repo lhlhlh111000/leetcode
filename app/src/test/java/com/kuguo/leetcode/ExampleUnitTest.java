@@ -103,5 +103,6 @@ public class ExampleUnitTest {
     @Test
     public void mySqrt() {
         Assert.assertEquals(EasyUtil.mySqrt(8), 2);
+        Assert.assertEquals(EasyUtil.mySqrt(5), 2);
     }
 }
