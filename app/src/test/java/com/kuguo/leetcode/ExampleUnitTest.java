@@ -99,4 +99,9 @@ public class ExampleUnitTest {
         Assert.assertEquals(EasyUtil.addBinary("11", "1"), "100");
         Assert.assertEquals(EasyUtil.addBinary("1010", "1011"), "10101");
     }
+
+    @Test
+    public void mySqrt() {
+        Assert.assertEquals(EasyUtil.mySqrt(8), 2);
+    }
 }

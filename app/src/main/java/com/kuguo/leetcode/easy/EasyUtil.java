@@ -309,4 +309,21 @@ public class EasyUtil {
         }
         return result;
     }
+
+    public static int mySqrt(int x) {
+        int ans = -1;
+        int l = 0;
+        int r = x;
+        while (l <= r) {
+            int mid = l + (r -1)/2;
+            if(mid*mid <= x) {
+                ans = mid;
+                l = mid + 1;
+            }else {
+                r = mid - 1;
+            }
+        }
+
+        return ans;
+    }
 }
