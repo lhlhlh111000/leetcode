@@ -336,4 +336,17 @@ public class EasyUtil {
 
         return ans[n];
     }
+
+    public static ListNode deleteDuplicates(ListNode head) {
+        ListNode ans = head;
+        while (null != ans && null != ans.next) {
+            if(ans.val == ans.next.val) {
+                ans.next = ans.next.next;
+            }else {
+                ans = ans.next;
+            }
+        }
+
+        return head;
+    }
 }
