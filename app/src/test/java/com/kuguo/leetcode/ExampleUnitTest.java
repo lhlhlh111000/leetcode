@@ -105,4 +105,9 @@ public class ExampleUnitTest {
         Assert.assertEquals(EasyUtil.mySqrt(8), 2);
         Assert.assertEquals(EasyUtil.mySqrt(5), 2);
     }
+
+    @Test
+    public void climbStairs() {
+        Assert.assertEquals(EasyUtil.climbStairs(3), 3);
+    }
 }
