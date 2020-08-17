@@ -1,5 +1,7 @@
 package com.kuguo.leetcode.easy;
 
+import com.kuguo.leetcode.model.TreeNode;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -354,5 +356,19 @@ public class EasyUtil {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         System.arraycopy(nums2, 0, nums1, m, n);
         Arrays.sort(nums1);
+    }
+
+    public static boolean isSameTree(TreeNode p, TreeNode q) {
+        if(null == p && null == q) {
+            return true;
+        }
+        if(null == p || null == q) {
+            return false;
+        }
+        if(p.val != q.val) {
+            return false;
+        }
+
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
 }
