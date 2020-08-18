@@ -371,4 +371,27 @@ public class EasyUtil {
 
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
+
+    public static boolean isSymmetric(TreeNode root) {
+        if(null == root) {
+            return true;
+        }
+        return isSame(root.left, root.right);
+    }
+
+    private static boolean isSame(TreeNode p, TreeNode q) {
+        if(null == p && null == q) {
+            return true;
+        }
+
+        if(null == p || null == q) {
+            return false;
+        }
+
+        if(p.val != q.val) {
+            return false;
+        }
+
+        return isSame(p.left, q.right) && isSame(p.right, q.left);
+    }
 }
