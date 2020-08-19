@@ -394,4 +394,14 @@ public class EasyUtil {
 
         return isSame(p.left, q.right) && isSame(p.right, q.left);
     }
+
+    public static int maxDepth(TreeNode root) {
+        if(null == root) {
+            return 0;
+        }else {
+            int leftMax = maxDepth(root.left);
+            int rightMax = maxDepth(root.right);
+            return Math.max(leftMax, rightMax) + 1;
+        }
+    }
 }
