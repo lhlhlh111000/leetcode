@@ -444,4 +444,16 @@ public class EasyUtil {
         ans.right = sortedArrayToBST(Arrays.copyOfRange(nums, mid + 1, nums.length));
         return ans;
     }
+
+    public static boolean isBalanced(TreeNode root) {
+        if(null == root) {
+            return true;
+        }
+
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+        return Math.abs(left - right) <= 1
+                && isBalanced(root.left)
+                && isBalanced(root.right);
+    }
 }
