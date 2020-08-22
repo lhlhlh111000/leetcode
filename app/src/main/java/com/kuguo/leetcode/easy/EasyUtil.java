@@ -456,4 +456,23 @@ public class EasyUtil {
                 && isBalanced(root.left)
                 && isBalanced(root.right);
     }
+
+    public static int minDepth(TreeNode root) {
+        if(null == root) {
+            return 0;
+        }
+
+        if(null == root.left && null == root.right) {
+            return 1;
+        }
+
+        int ml = minDepth(root.left);
+        int mr = minDepth(root.right);
+
+        if(null == root.right || null == root.left) {
+            return ml + mr + 1;
+        }
+
+        return Math.min(ml, mr) + 1;
+    }
 }
