@@ -475,4 +475,17 @@ public class EasyUtil {
 
         return Math.min(ml, mr) + 1;
     }
+
+    public static boolean hasPathSum(TreeNode root, int sum) {
+        if(null == root) {
+            return false;
+        }
+        if(sum == root.val
+                && null == root.left && null == root.right) {
+            return true;
+        }
+
+        return hasPathSum(root.left, sum - root.val)
+                || hasPathSum(root.right, sum - root.val);
+    }
 }
