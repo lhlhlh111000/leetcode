@@ -488,4 +488,25 @@ public class EasyUtil {
         return hasPathSum(root.left, sum - root.val)
                 || hasPathSum(root.right, sum - root.val);
     }
+
+    public static List<List<Integer>> generate(int numRows) {
+        if(0 == numRows) {
+            return new ArrayList<>();
+        }
+
+        List<List<Integer>> ans = new ArrayList<>();
+        for(int i=1; i<=numRows; i++) {
+            List<Integer> items = new ArrayList<>();
+            for(int j=0; j<i; j++) {
+                if(j <= 0 || j >= i - 1) {
+                    items.add(1);
+                }else {
+                    items.add(ans.get(i - 2).get(j - 1) + ans.get(i -2).get(j));
+                }
+            }
+            ans.add(items);
+        }
+
+        return ans;
+    }
 }
