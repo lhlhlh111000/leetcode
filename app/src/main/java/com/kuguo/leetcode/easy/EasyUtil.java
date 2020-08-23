@@ -509,4 +509,8 @@ public class EasyUtil {
 
         return ans;
     }
+
+    public static List<Integer> getRow(int rowIndex) {
+        return generate(rowIndex + 1).get(rowIndex);
+    }
 }
