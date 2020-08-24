@@ -513,4 +513,15 @@ public class EasyUtil {
     public static List<Integer> getRow(int rowIndex) {
         return generate(rowIndex + 1).get(rowIndex);
     }
+
+    public static int maxProfit(int[] prices) {
+        int ans = 0;
+        for(int i=0; i<prices.length; i++) {
+            for(int j=i+1; j<prices.length; j++) {
+                ans = Math.max(prices[j] - prices[i], ans);
+            }
+        }
+
+        return ans;
+    }
 }
