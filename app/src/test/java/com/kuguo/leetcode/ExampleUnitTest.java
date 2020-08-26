@@ -110,4 +110,9 @@ public class ExampleUnitTest {
     public void climbStairs() {
         Assert.assertEquals(EasyUtil.climbStairs(3), 3);
     }
+
+    @Test
+    public void isPalindrome1() {
+        Assert.assertEquals(EasyUtil.isPalindrome("A man, a plan, a canal: Panama"), true);
+    }
 }

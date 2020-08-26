@@ -536,4 +536,21 @@ public class EasyUtil {
         }
         return res;
     }
+
+    public static boolean isPalindrome(String s) {
+        if(null == s) {
+            return true;
+        }
+
+        s = s.replaceAll("[^a-z|A-Z|0-9]", "");
+        int length = s.length();
+        for(int i=0; i<length/2; i++) {
+            if(!String.valueOf(s.charAt(i)).toLowerCase().equals(
+                    String.valueOf(s.charAt(length - i - 1)).toLowerCase())) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
