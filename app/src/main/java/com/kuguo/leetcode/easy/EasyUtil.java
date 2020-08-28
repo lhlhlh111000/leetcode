@@ -562,4 +562,23 @@ public class EasyUtil {
 
         return ans;
     }
+
+    public boolean hasCycle(ListNode head) {
+        if(null == head || null == head.next) {
+            return false;
+        }
+
+        ListNode slow = head.next;
+        ListNode fast = head.next.next;
+        while (slow != fast) {
+            if(null == fast || null == fast.next) {
+                return false;
+            }
+
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return true;
+    }
 }
