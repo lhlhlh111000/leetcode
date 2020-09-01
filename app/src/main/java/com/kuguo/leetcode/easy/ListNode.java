@@ -9,7 +9,7 @@ package com.kuguo.leetcode.easy;
  * @version 2020/8/2
  */
 public class ListNode {
-    int val;
+    public int val;
     public ListNode next;
     public ListNode() {}
     public ListNode(int val) { this.val = val; }
