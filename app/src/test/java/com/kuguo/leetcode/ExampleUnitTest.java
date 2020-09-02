@@ -115,4 +115,9 @@ public class ExampleUnitTest {
     public void isPalindrome1() {
         Assert.assertEquals(EasyUtil.isPalindrome("A man, a plan, a canal: Panama"), true);
     }
+
+    @Test
+    public void convertToTitle() {
+        EasyUtil.convertToTitle(52);
+    }
 }

@@ -607,4 +607,14 @@ public class EasyUtil {
 
         return new int[]{-1, -1};
     }
+
+    public static String convertToTitle(int n) {
+        StringBuilder stringBuilder = new StringBuilder();
+        while (n != 0) {
+            n--;
+            stringBuilder.append((char) ('A' + n % 26));
+            n /= 26;
+        }
+        return stringBuilder.reverse().toString();
+    }
 }
