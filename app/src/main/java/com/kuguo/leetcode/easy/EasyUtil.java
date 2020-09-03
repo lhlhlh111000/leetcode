@@ -617,4 +617,13 @@ public class EasyUtil {
         }
         return stringBuilder.reverse().toString();
     }
+
+    public static int majorityElement(int[] nums) {
+        if(null == nums) {
+            return -1;
+        }
+
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+    }
 }
