@@ -120,4 +120,9 @@ public class ExampleUnitTest {
     public void convertToTitle() {
         EasyUtil.convertToTitle(52);
     }
+
+    @Test
+    public void trailingZeroes() {
+        EasyUtil.trailingZeroes(13);
+    }
 }
